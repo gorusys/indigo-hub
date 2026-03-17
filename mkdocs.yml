@@ -1,0 +1,82 @@
+site_name: Indigo Protocol Education
+site_description: Open-source learning materials for the Indigo Protocol (Cardano synthetic assets)
+site_url: https://gorusys.github.io/indigo-hub/
+repo_url: https://github.com/gorusys/indigo-hub
+repo_name: indigo-hub
+edit_uri: edit/main/docs/
+copyright: "Indigo Protocol Education Initiative contributors. Content CC BY-SA 4.0; code MIT."
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.tabs.link
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - tables
+
+nav:
+  - Home: index.md
+  - Beginner track:
+    - beginner/index.md
+    - Introduction to Cardano & DeFi: beginner/intro.md
+    - What is a Synthetic Asset?: beginner/synthetic-assets.md
+    - Getting Started with Indigo: beginner/using-indigo.md
+    - Collateral and CDPs: beginner/collateral-cdps.md
+    - Using Stability Pools: beginner/stability-pools.md
+    - Staking INDY & Governance: beginner/staking-governance.md
+    - Risks and Best Practices: beginner/risks-best-practices.md
+  - Developer track:
+    - developer/index.md
+    - Indigo Architecture: developer/arch-overview.md
+    - Plutus & eUTxO Primer: developer/plutus-eutxo.md
+    - Indigo TypeScript SDK: developer/sdk-setup.md
+    - Code Lab – Mint iUSD: developer/code-lab-mint-iusd.md
+    - Advanced Contract Interaction: developer/advanced-contract-interaction.md
+    - Integration Example: developer/integration-example.md
+    - Testing and Deployment: developer/testing-deployment.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gorusys/indigo-hub
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/indigo

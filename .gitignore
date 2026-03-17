@@ -1,0 +1,35 @@
+# MkDocs
+/site/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local env
+.env
+.env.local
+
+# Build / cache
+.cache/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node (if used for tooling)
+node_modules/

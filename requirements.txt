@@ -1,0 +1,5 @@
+# Documentation site (MkDocs)
+mkdocs-material>=9.0.0
+
+# Optional: link checking (uncomment to use in CI)
+# mkdocs-linkcheck>=0.14.0

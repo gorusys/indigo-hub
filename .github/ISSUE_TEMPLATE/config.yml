@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Indigo Protocol Documentation
+    url: https://docs.indigoprotocol.io/
+    about: Official Indigo docs and technical reference
+  - name: Community (Discord)
+    url: https://discord.gg/indigo
+    about: Ask questions and join education channels
