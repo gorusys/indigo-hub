@@ -8,6 +8,7 @@ Learn about **Indigo Protocol** — a Cardano-based platform for synthetic asset
 |-------------|------------|
 | **New to Indigo or DeFi** | [Introduction to Cardano & DeFi](beginner/intro.md) → [What is a Synthetic Asset?](beginner/synthetic-assets.md) → [Getting Started with Indigo](beginner/using-indigo.md) |
 | **Developer** | [Indigo Architecture](developer/arch-overview.md) → [Plutus & eUTxO Primer](developer/plutus-eutxo.md) → [Indigo TypeScript SDK](developer/sdk-setup.md) |
+| **AI / MCP users** | [Indigo Agents & AI](agents/index.md) → [Setup MCP](agents/setup-mcp.md) and [Repos & SDK](agents/resources.md) |
 | **Researcher / advanced** | [Advanced Contract Interaction](developer/advanced-contract-interaction.md), [Staking & Governance](beginner/staking-governance.md), and protocol deep dives |
 
 ## What you'll learn
@@ -20,6 +21,7 @@ Learn about **Indigo Protocol** — a Cardano-based platform for synthetic asset
 
 - [Indigo Protocol](https://indigoprotocol.io/) — official site  
 - [Indigo Documentation](https://docs.indigoprotocol.io/) — technical reference  
+- [Indigo Agents Portal](https://agents.indigoprotocol.io/) — AI tools, MCP, and SDK  
 - [Indigo Discord](https://discord.gg/indigo) — community and support  
 
 ## About this project

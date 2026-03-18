@@ -56,6 +56,7 @@ See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for full text.
 
 - [Indigo Protocol](https://indigoprotocol.io/)
 - [Indigo Documentation](https://docs.indigoprotocol.io/)
+- [Indigo Agents Portal](https://agents.indigoprotocol.io/) — AI tools, MCP setup, and SDK integrations
 - [Indigo Discord / Community](https://discord.gg/indigo) — ask questions and join education efforts
 
 ---

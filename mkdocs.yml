@@ -73,6 +73,10 @@ nav:
     - Advanced Contract Interaction: developer/advanced-contract-interaction.md
     - Integration Example: developer/integration-example.md
     - Testing and Deployment: developer/testing-deployment.md
+  - Agents & AI:
+    - agents/index.md
+    - Setup MCP: agents/setup-mcp.md
+    - Repos & SDK: agents/resources.md
 
 extra:
   social:
