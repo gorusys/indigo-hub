@@ -20,7 +20,7 @@ Open-source educational materials for the [Indigo Protocol](https://indigoprotoc
 
 - **New to Indigo?** Start with [Indigo Fundamentals](docs/beginner/intro.md) and [Getting Started with Indigo](docs/beginner/using-indigo.md).
 - **Building on Indigo?** Go to the [Developer Track](docs/developer/arch-overview.md) and [Indigo TypeScript SDK](docs/developer/sdk-setup.md).
-- **Run the docs locally:** See [Contributing](#contributing) below.
+- **Run the docs locally:** See [Contributing](CONTRIBUTING.md#run-the-docs-locally) below.
 
 ## Repository Structure
 
@@ -28,13 +28,13 @@ Open-source educational materials for the [Indigo Protocol](https://indigoprotoc
 .
 ├── README.md
 ├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
 ├── LICENSE
 ├── mkdocs.yml              # MkDocs config for the documentation site
 ├── docs/                   # Documentation source (Markdown)
 │   ├── index.md
 │   ├── beginner/           # Beginner track modules
-│   └── developer/          # Developer track modules
+│   ├── developer/          # Developer track modules
+│   └── agents/             # Indigo Agents, MCP setup, repos & SDK
 ├── content/                # Drafts, transcripts, working files
 ├── code-labs/              # Jupyter notebooks and TypeScript examples
 ├── images/                 # Diagrams and illustrations
