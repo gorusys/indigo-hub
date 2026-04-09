@@ -34,6 +34,4 @@ Thumbs.db
 # Node (if used for tooling)
 node_modules/
 
-# Next.js (ai-chat)
-ai-chat/.next/
-ai-chat/tsconfig.tsbuildinfo
+.next/

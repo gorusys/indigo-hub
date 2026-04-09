@@ -1,0 +1,19 @@
+{
+  "name": "indigo-mint-iusd-lab",
+  "version": "1.0.0",
+  "description": "Code lab: mint iUSD using Indigo SDK (education only)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "mint": "ts-node mint-iusd.ts",
+    "dry-run": "DRY_RUN=1 ts-node mint-iusd.ts"
+  },
+  "dependencies": {
+    "@indigoprotocol/sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -37,8 +37,6 @@ Open-source educational materials for the [Indigo Protocol](https://indigoprotoc
 │   └── agents/             # Indigo Agents, MCP setup, repos & SDK
 ├── content/                # Drafts, transcripts, working files
 ├── code-labs/              # Jupyter notebooks and TypeScript examples
-├── ai-chat/                # Next.js Indigo Hub AI assistant (same stack as indigo-ai)
-├── scripts/                # e.g. verify-integration.sh (docs + ai-chat build)
 ├── images/                 # Diagrams and illustrations
 ├── videos/                 # Tutorial recordings or links
 └── .github/
@@ -64,3 +62,49 @@ See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for full text.
 ---
 
 *This project is community-led and is not officially operated by Indigo Labs. Content is for education only; not financial advice.*
+
+---
+
+## IndigoAI RAG Chatbot (this Next.js app)
+
+This repository also includes an AI “chat over docs” widget built with **Next.js**, **OpenAI**, and **Supabase pgvector**.
+
+### What gets ingested
+
+**Recommended:** `npm run embed` crawls **[docs.indigoprotocol.io](https://docs.indigoprotocol.io/)** (GitBook) starting from `/readme.md`, follows internal `*.md` links under `/readme/…`, and stores **`canonicalUrl`** on every chunk so **Sources** links match the live site (no guessed paths / 404s).
+
+**Optional:** `npm run embed:local` embeds **all `.md` files under `./docs/`** (MkDocs-style Indigo Hub repo layout). That corpus does **not** match GitBook URL paths; use the site embed for correct citations.
+
+### Supabase objects (Indigo-only)
+
+This app uses isolated vector storage so Indigo embeddings don’t mix with any other corpus:
+
+- Table: `public.indigo_docs_embeddings`
+- RPC: `public.match_indigo_docs_embeddings`
+
+### Setup
+
+1. Install dependencies:
+   - `npm install`
+2. Configure environment variables:
+   - Copy `.env.local.example` to `.env.local` and fill in:
+     - `OPENAI_API_KEY`
+     - `SUPABASE_URL`
+     - `SUPABASE_ANON_KEY`
+     - `SUPABASE_SERVICE_ROLE_KEY`
+3. Run the Supabase SQL:
+   - Execute everything in `sql/schema.sql` in the Supabase SQL editor.
+4. (Recommended) Fix IVFFlat indexing after ingestion:
+   - Execute `sql/fix_ivfflat.sql` once after your first successful embed.
+5. Embed docs into Supabase:
+   - `npm run embed` (live docs site — recommended)
+   - or `npm run embed:local` (local `./docs/` only)
+6. Start the app:
+   - `npm run dev`
+   - Open `http://localhost:3000`
+
+### “Sources” links / citations
+
+When the assistant answers with retrieved docs, it appends a **Sources** block.
+After a **site embed**, each chunk has `metadata.canonicalUrl` pointing at the exact GitBook page (e.g. `https://docs.indigoprotocol.io/readme/using-indigo`).
+If you only ran **`embed:local`**, citations fall back to path-based URLs and may **404** because GitBook paths (`/readme/...`) differ from MkDocs paths (`/beginner/...`).

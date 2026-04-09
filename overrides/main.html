@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    window.__INDIGO_CHAT_EMBED_URL__ = "{{ config.extra.chat_embed_url | default('') }}";
+  </script>
+  <script src="{{ 'javascripts/chat-embed.js' | url }}"></script>
+{% endblock %}

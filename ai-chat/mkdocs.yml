@@ -8,7 +8,6 @@ copyright: "Indigo Protocol Education Initiative contributors. Content CC BY-SA 
 
 theme:
   name: material
-  custom_dir: overrides
   language: en
   palette:
     - scheme: default
@@ -80,9 +79,6 @@ nav:
     - Repos & SDK: agents/resources.md
 
 extra:
-  # Full URL to the Next.js app embed page (ai-chat), e.g. https://your-deployment.vercel.app/embed
-  # Leave empty to hide the floating chat on the static docs site until the API is deployed.
-  chat_embed_url: "http://127.0.0.1:3000/embed"
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/gorusys/indigo-hub
