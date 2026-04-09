@@ -23,6 +23,8 @@ jobs:
           pip install mkdocs-material
 
       - name: Build site
+        env:
+          INDIGO_CHAT_EMBED_URL: https://indigo-hub-ai.vercel.app/embed
         run: mkdocs build --strict
 
       - name: Upload site (on push to main)

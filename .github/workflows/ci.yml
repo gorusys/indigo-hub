@@ -23,6 +23,8 @@ jobs:
           pip install mkdocs-material mkdocs-linkcheck
 
       - name: Build with link check
+        env:
+          INDIGO_CHAT_EMBED_URL: https://indigo-hub-ai.vercel.app/embed
         run: mkdocs build --strict
         continue-on-error: true  # linkcheck can fail on external URLs; fix or remove when stable
 
